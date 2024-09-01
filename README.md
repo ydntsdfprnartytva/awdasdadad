@@ -31,7 +31,7 @@ CloseCallback = <function> - Function to execute when the window is closed.
 ```lua
 local Tab = Window:MakeTab({
 	Name = "Tab 1",
-	Icon = "rbxassetid://4483362458",
+	Icon = "", -- do not add any images
 	PremiumOnly = false
 })
 
