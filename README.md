@@ -1,4 +1,4 @@
-# Metahub Library
+# for this hub
 This documentation is for the stable release of Orion Library.
 
 ## Booting the Library
@@ -10,7 +10,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/rai
 
 ## Creating a Window
 ```lua
-local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Meta hub reborn", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --[[
 Name = <string> - The name of the UI.
@@ -31,7 +31,6 @@ CloseCallback = <function> - Function to execute when the window is closed.
 ```lua
 local Tab = Window:MakeTab({
 	Name = "Tab 1",
-	Icon = "", -- do not add any images
 	PremiumOnly = false
 })
 
