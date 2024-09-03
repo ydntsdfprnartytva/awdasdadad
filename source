@@ -317,22 +317,22 @@ function Luxt1.CreateWindow(libName, logoId)
                     for i,v in next, v:GetChildren() do
                         if v:IsA("TextButton") then
                             game.TweenService:Create(v, TweenInfo.new(0.18, Enum.EasingStyle.Quint, Enum.EasingDirection.In), {
-                                TextColor3 = Color3.fromRGB(67, 76, 121)
+                                TextColor3 = Color3.fromRGB(53, 60, 97)
                             }):Play()
                         end
                         if v:IsA("ImageLabel") then
                             game.TweenService:Create(v, TweenInfo.new(0.18, Enum.EasingStyle.Quint, Enum.EasingDirection.In), {
-                                ImageColor3 = Color3.fromRGB(67, 76, 121)
+                                ImageColor3 = Color3.fromRGB(53, 60, 97)
                             }):Play()
                         end
                     end
                 end
             end
             game.TweenService:Create(tabLogo, TweenInfo.new(0.18, Enum.EasingStyle.Quint, Enum.EasingDirection.In), {
-                ImageColor3 = Color3.fromRGB(67, 76, 121)
+                ImageColor3 = Color3.fromRGB(53, 60, 97)
             }):Play()
             game.TweenService:Create(tabBtn, TweenInfo.new(0.18, Enum.EasingStyle.Quint, Enum.EasingDirection.In), {
-                TextColor3 = Color3.fromRGB(67, 76, 121)
+                TextColor3 = Color3.fromRGB(53, 60, 97)
             }):Play()
         end)
 
@@ -1199,7 +1199,7 @@ function Luxt1.CreateWindow(libName, logoId)
                                         optionBtn1.AutoButtonColor = false
                                         optionBtn1.Font = Enum.Font.GothamSemibold
                                         optionBtn1.Text = "  "..v
-                                        optionBtn1.TextColor3 = Color3.fromRGB(67, 76, 121)
+                                        optionBtn1.TextColor3 = Color3.fromRGB(120, 200, 187)
                                         optionBtn1.TextSize = 14.000
                                         optionBtn1.TextXAlignment = Enum.TextXAlignment.Left
     
@@ -1247,7 +1247,7 @@ function Luxt1.CreateWindow(libName, logoId)
                                         optionBtn1.MouseLeave:Connect(function()
                                             game.TweenService:Create(optionBtn1, TweenInfo.new(0.18, Enum.EasingStyle.Linear, Enum.EasingDirection.Out),{
                                                 BackgroundColor3 = Color3.fromRGB(11, 11, 11),
-                                                TextColor3 = Color3.fromRGB(67, 76, 121)
+                                                TextColor3 = Color3.fromRGB(53, 60, 97)
                                             }):Play()
                                         end)
                                 end
