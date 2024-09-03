@@ -1232,7 +1232,7 @@ function Luxt1.CreateWindow(libName, logoId)
                                         optionBtn1.MouseButton1Up:Connect(function()
                                             optionBtn1:TweenSize(UDim2.new(0, 339,0, 34), "InOut", "Quint", 0.12, true)
                                             game.TweenService:Create(optionBtn1, TweenInfo.new(0.18, Enum.EasingStyle.Linear, Enum.EasingDirection.Out),{
-                                                BackgroundColor3 = Color3.fromRGB(101, 168, 157),
+                                                BackgroundColor3 = Color3.fromRGB(67, 76, 121),
                                                 TextColor3 = Color3.fromRGB(0,0,0)
                                             }):Play()
                                         end)
