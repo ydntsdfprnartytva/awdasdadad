@@ -479,7 +479,7 @@ function Luxt1.CreateWindow(libName, logoId)
                         debounce1 = true
                         TextButton:TweenSize(UDim2.new(0, 359,0, 30), "InOut", "Quint", 0.18, true)
                         game.TweenService:Create(TextButton, TweenInfo.new(0.18, Enum.EasingStyle.Linear, Enum.EasingDirection.Out),{
-                            BackgroundColor3 = Color3.fromRGB(101, 168, 157),
+                            BackgroundColor3 = Color3.fromRGB(67, 76, 121),
                             TextColor3 = Color3.fromRGB(0,0,0)
                         }):Play()
                         wait(1)
