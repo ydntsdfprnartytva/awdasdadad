@@ -1,6 +1,6 @@
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
 
-local Luxt = Luxtl.CreateWindow("IDK Hub", 6105620301)
+local Luxt = Luxtl.CreateWindow("IDK Hub", 9495499963)
 
 local mainTab = Luxt:Tab("Auto-Farm", 6087485864)
 local teleportsTab = Luxt:Tab("Teleports")
