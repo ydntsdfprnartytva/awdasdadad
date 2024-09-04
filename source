@@ -115,14 +115,14 @@ function Library:CreateWindow(options)
 	TabBar.Name = "TabBar"
 	TabBar.Position = UDim2.new(0.0193,0,0.0274,0)
 	TabBar.Size = UDim2.new(0,180,0,414)
-	TabBar.BackgroundColor3 = Color3.new(0.1529,0.1529,0.1529)
+	TabBar.BackgroundColor3 = Color3.new(31,31,31)
 	TabBar.BorderSizePixel = 0
 	TabBar.BorderColor3 = Color3.new(0,0,0)
 	TabBar.ZIndex = 101
 	SelectedTab.Name = "SelectedTab"
 	SelectedTab.Position = UDim2.new(0.0389,0,0.1836,0)
 	SelectedTab.Size = UDim2.new(0,165,0,24)
-	SelectedTab.BackgroundColor3 = Color3.new(63,79,158)
+	SelectedTab.BackgroundColor3 = Color3.new(1,1,1)
 	SelectedTab.BorderSizePixel = 0
 	SelectedTab.BorderColor3 = Color3.new(0,0,0)
 	SelectedTab.ZIndex = 105
@@ -145,6 +145,9 @@ function Library:CreateWindow(options)
 	Divider.BorderColor3 = Color3.new(0,0,0)
 	Divider.ZIndex = 121
 	TabBarStroke.Color = Color3.new(0.251,0.251,0.251)
+	SelectedGradient.Name = "SelectedGradient"
+	SelectedGradient.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0.9607843160629272, 0.4117647111415863, 0.9764705896377563)), ColorSequenceKeypoint.new(1, Color3.new(0.5254902243614197, 0.43529412150382996, 1))})
+	SelectedGradient.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0,0.2749999761581421,0), NumberSequenceKeypoint.new(1,0.32499998807907104,0)})
 	Search.Name = "Search"
 	Search.Position = UDim2.new(0.933,0,0.0274,0)
 	Search.Size = UDim2.new(0,24,0,24)
@@ -337,7 +340,7 @@ function Library:CreateWindow(options)
 			Toggle.Name = "Toggle"
 			Toggle.Position = UDim2.new(0.3031,0,0.5718,0)
 			Toggle.Size = UDim2.new(0,475,0,33)
-			Toggle.BackgroundColor3 = Color3.new(0.1529,0.1529,0.1529)
+			Toggle.BackgroundColor3 = Color3.new(31,31,31)
 			Toggle.BorderSizePixel = 0
 			Toggle.BorderColor3 = Color3.new(0,0,0)
 			Toggle.ZIndex = 115
@@ -445,11 +448,12 @@ function Library:CreateWindow(options)
 			local SliderBackCorner = Instance.new('UICorner', SliderBack)
 			local SliderMain = Instance.new('Frame', SliderBack)
 			local SliderMainCorner = Instance.new('UICorner', SliderMain)
+			local SliderMainGradient = Instance.new('UIGradient', SliderMain)
 			
 			Slider.Name = "Slider"
 			Slider.Position = UDim2.new(0.3031,0,0.5718,0)
 			Slider.Size = UDim2.new(0,475,0,46)
-			Slider.BackgroundColor3 = Color3.new(0.1529,0.1529,0.1529)
+			Slider.BackgroundColor3 = Color3.new(31,31,31)
 			Slider.BorderSizePixel = 0
 			Slider.BorderColor3 = Color3.new(0,0,0)
 			Slider.ZIndex = 115
@@ -492,11 +496,14 @@ function Library:CreateWindow(options)
 			SliderMain.Name = "SliderMain"
 			SliderMain.Position = UDim2.new(-0.0006,0,0,0)
 			SliderMain.Size = UDim2.new(0,120,0,4)
-			SliderMain.BackgroundColor3 = Color3.new(21,21,21)
+			SliderMain.BackgroundColor3 = Color3.new(0.5843,0.5843,0.5843)
 			SliderMain.BorderSizePixel = 0
 			SliderMain.BorderColor3 = Color3.new(0,0,0)
 			SliderMain.ZIndex = 131
+			SliderMainGradient.Name = "SliderMainGradient"
+			SliderMainGradient.Color = ColorSequence.new({ColorSequenceKeypoint.new(0,Color3.new(0.9607843160629272, 0.4117647111415863, 0.9764705896377563)	),ColorSequenceKeypoint.new(1,Color3.new(0.5254902243614197, 0.43529412150382996, 1))})
 			
+
 			function slider:SetValue(v)
 				if v == nil then
 					local percentage = math.clamp((mouse.X - SliderBack.AbsolutePosition.X) / (SliderBack.AbsoluteSize.X), 0, 1)
@@ -593,7 +600,7 @@ function Library:CreateWindow(options)
 			Dropdown.Name = "Dropdown"
 			Dropdown.Position = UDim2.new(0.3031,0,0.5718,0)
 			Dropdown.Size = UDim2.new(0,475,0,33)
-			Dropdown.BackgroundColor3 = Color3.new(0.1529,0.1529,0.1529)
+			Dropdown.BackgroundColor3 = Color3.new(31,31,31)
 			Dropdown.BorderSizePixel = 0
 			Dropdown.BorderColor3 = Color3.new(0,0,0)
 			Dropdown.ZIndex = 115
@@ -744,7 +751,7 @@ function Library:CreateWindow(options)
 			Button.Name = "Button"
 			Button.Position = UDim2.new(0.3031,0,0.5718,0)
 			Button.Size = UDim2.new(0,475,0,33)
-			Button.BackgroundColor3 = Color3.new(0.1529,0.1529,0.1529)
+			Button.BackgroundColor3 = Color3.new(31,31,31)
 			Button.BorderSizePixel = 0
 			Button.BorderColor3 = Color3.new(0,0,0)
 			Button.ZIndex = 115
@@ -772,7 +779,7 @@ function Library:CreateWindow(options)
 			end)
 			
 			Button.MouseButton1Up:Connect(function()
-				Library:tween3(Button, {BackgroundColor3 = Color3.new(0.1529,0.1529,0.1529)})
+				Library:tween3(Button, {BackgroundColor3 = Color3.new(31,31,31)})
 			end)
 			
 		end
@@ -804,7 +811,7 @@ function Library:CreateWindow(options)
 			SectionTitle.BorderSizePixel = 0
 			SectionTitle.BorderColor3 = Color3.new(0,0,0)
 			SectionTitle.Text = options.Name
-			SectionTitle.TextColor3 = Color3.new(1,1,1)
+			SectionTitle.TextColor3 = Color3.new(153,153,153)
 			SectionTitle.Font = Enum.Font.Gotham
 			SectionTitle.TextSize = 15
 			SectionTitle.ZIndex = 121
