@@ -1,4 +1,4 @@
-# Orion Library
+# Orion Library/Ghxst Hub
 This documentation is for the stable release of Orion Library.
 
 ## Booting the Library
