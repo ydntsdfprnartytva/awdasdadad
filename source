@@ -122,7 +122,7 @@ function Library:CreateWindow(options)
 	SelectedTab.Name = "SelectedTab"
 	SelectedTab.Position = UDim2.new(0.0389,0,0.1836,0)
 	SelectedTab.Size = UDim2.new(0,165,0,24)
-	SelectedTab.BackgroundColor3 = Color3.new(1,1,1)
+	SelectedTab.BackgroundColor3 = Color3.new(63,79,158)
 	SelectedTab.BorderSizePixel = 0
 	SelectedTab.BorderColor3 = Color3.new(0,0,0)
 	SelectedTab.ZIndex = 105
@@ -145,9 +145,6 @@ function Library:CreateWindow(options)
 	Divider.BorderColor3 = Color3.new(0,0,0)
 	Divider.ZIndex = 121
 	TabBarStroke.Color = Color3.new(0.251,0.251,0.251)
-	SelectedGradient.Name = "SelectedGradient"
-	SelectedGradient.Color = ColorSequence.new({ColorSequenceKeypoint.new(0,128/255, 128/255, 192/255), ColorSequenceKeypoint.new(1, Color3.new(1, 1, 128))})
-	SelectedGradient.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(1,1/255, 1/255, 128/255), NumberSequenceKeypoint.new(1,0.32499998807907104,0)})
 	Search.Name = "Search"
 	Search.Position = UDim2.new(0.933,0,0.0274,0)
 	Search.Size = UDim2.new(0,24,0,24)
