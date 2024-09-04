@@ -1,37 +1,62 @@
-local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
+# Documenation
 
-local Luxt = Luxtl.CreateWindow("Wisteria GUI", 6105620301)
+## Creating a Window
+```lua
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/vFishyTurtle/SN-Lib/main/src'))()
+local lib = Library:CreateWindow({Title = "SN Lib"})
+```
 
-local mainTab = Luxt:Tab("Auto-Farm", 6087485864)
-local teleportsTab = Luxt:Tab("Teleports")
-local autoQTab = Luxt:Tab("Auto-Quest")
-local combatTab = Luxt:Tab("Combat")
-local creditsTab = Luxt:Tab("Credits")
-local cf = creditsTab:Section("Main Credits")
-cf:Credit("Luxt: Main Coding")
-local cf1 = creditsTab:Section("UI Credits")
-cf1:Credit("xHeptc: UI Library")
-local cf2 = creditsTab:Section("Helping Credits")
-cf2:Credit("Salad: Helping")
+## Creating a Tab
+```lua
+local t1 = lib:NewTab({Name = "Catching"})
+```
+## Adding a Section
+```lua
+local s1 = t1:NewSection({Name = "Section"})
+```
 
-local Examples = Luxt:Tab("Examples")
-local ff = Examples:Section("All Examples")
-ff:Label("Welcome to Wisteria GUI")
-ff:Button("TextButton Text", function()
-    print("Clicked!")
-end)
-ff:Toggle("Toggle Me!", function(isToggled)
-    print(isToggled) -- prints true or false
-end)
-ff:KeyBind("Print('Hey') on bind", Enum.KeyCode.R, function() --Enum.KeyCode.R is starting Key
-    print('Hey')
-end)
-ff:TextBox("TextBox Info", "Epic PlaceHolder", function(getText)
-    print(getText) -- Prints whatever player types
-end)
-ff:Slider("WalkSpeed", 16, 503, function(currentValue)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = currentValue 
-end)
-ff:DropDown("Favorite Food?", {"Pizza", "Burger", "Sandwiches"}, function(food) -- food is chosen item
-    print(food)
-end)
+## Adding a Toggle
+```lua
+s1:NewToggle({
+	Name = "Magnets",
+	default = false,
+	callback = function(v)
+		print(v)
+	end,
+})
+```
+
+## Adding a Slider
+```lua
+t1:NewSlider({
+	Name = "Magnets Range",
+	default = 50,
+	min = 0,
+	max = 100,
+	callback = function(v)
+		print(v)
+	end,
+})
+```
+
+## Adding a Button
+```lua
+t1:NewButton({
+	Name = "Button Yay",
+	callback = function(v)
+		print("Yay")
+	end,
+})
+```
+
+## Adding a Dropdown
+```lua
+s1:NewDropdown({
+	Name = "Dropdown lol",
+	options = {"Apple", "Banana", "Grape"},
+	default = "Grape",
+	callback = function(v)
+		print(v)
+	end,
+})
+```
