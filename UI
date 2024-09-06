@@ -17,7 +17,7 @@ local OrionLib = {
 			Main = Color3.fromRGB(25, 25, 25),
 			Second = Color3.fromRGB(25, 25, 25),
 			Stroke = Color3.fromRGB(60, 60, 60),
-			Divider = Color3.fromRGB(45, 45, 45),
+			Divider = Color3.fromRGB(25, 25, 25),
 			Text = Color3.fromRGB(240, 240, 240),
 			TextDark = Color3.fromRGB(150, 150, 150)
 		}
@@ -363,7 +363,7 @@ end)
 CreateElement("Label", function(Text, TextSize, Transparency)
 	local Label = Create("TextLabel", {
 		Text = Text or "",
-		TextColor3 = Color3.fromRGB(153, 153, 153),
+		TextColor3 = Color3.fromRGB(240, 240, 240),
 		TextTransparency = Transparency or 0,
 		TextSize = TextSize or 15,
 		Font = Enum.Font.Gotham,
@@ -412,7 +412,7 @@ function OrionLib:MakeNotification(NotificationConfig)
 			MakeElement("Padding", 12, 12, 12, 12),
 			SetProps(MakeElement("Image", NotificationConfig.Image), {
 				Size = UDim2.new(0, 20, 0, 20),
-				ImageColor3 = Color3.fromRGB(153, 153, 153),
+				ImageColor3 = Color3.fromRGB(240, 240, 240),
 				Name = "Icon"
 			}),
 			SetProps(MakeElement("Label", NotificationConfig.Name, 15), {
@@ -471,7 +471,7 @@ function OrionLib:MakeWindow(WindowConfig)
 	local UIHidden = false
 
 	WindowConfig = WindowConfig or {}
-	WindowConfig.Name = WindowConfig.Name or "ghxst Library/Orion Library"
+	WindowConfig.Name = WindowConfig.Name or "Orion Library"
 	WindowConfig.ConfigFolder = WindowConfig.ConfigFolder or WindowConfig.Name
 	WindowConfig.SaveConfig = WindowConfig.SaveConfig or false
 	WindowConfig.HidePremium = WindowConfig.HidePremium or false
@@ -859,7 +859,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				ButtonConfig = ButtonConfig or {}
 				ButtonConfig.Name = ButtonConfig.Name or "Button"
 				ButtonConfig.Callback = ButtonConfig.Callback or function() end
-				ButtonConfig.Icon = ButtonConfig.Icon or "rbxassetid://10734898355"
+				ButtonConfig.Icon = ButtonConfig.Icon or "rbxassetid://3944703587"
 
 				local Button = {}
 
@@ -940,7 +940,7 @@ function OrionLib:MakeWindow(WindowConfig)
 						AnchorPoint = Vector2.new(0.5, 0.5),
 						Position = UDim2.new(0.5, 0, 0.5, 0),
 						ImageColor3 = Color3.fromRGB(255, 255, 255),
-						Name = "Icon"
+						Name = "Ico"
 					}),
 				})
 
@@ -963,7 +963,7 @@ function OrionLib:MakeWindow(WindowConfig)
 					Toggle.Value = Value
 					TweenService:Create(ToggleBox, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Toggle.Value and ToggleConfig.Color or OrionLib.Themes.Default.Divider}):Play()
 					TweenService:Create(ToggleBox.Stroke, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Color = Toggle.Value and ToggleConfig.Color or OrionLib.Themes.Default.Stroke}):Play()
-					TweenService:Create(ToggleBox.Ico, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = Toggle.Value and 1 or 1, Size = Toggle.Value and UDim2.new(0, 20, 0, 20) or UDim2.new(0, 8, 0, 8)}):Play()
+					TweenService:Create(ToggleBox.Ico, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = Toggle.Value and 0 or 1, Size = Toggle.Value and UDim2.new(0, 20, 0, 20) or UDim2.new(0, 8, 0, 8)}):Play()
 					ToggleConfig.Callback(Toggle.Value)
 				end    
 
@@ -1135,7 +1135,7 @@ function OrionLib:MakeWindow(WindowConfig)
 							Size = UDim2.new(0, 20, 0, 20),
 							AnchorPoint = Vector2.new(0, 0.5),
 							Position = UDim2.new(1, -30, 0.5, 0),
-							ImageColor3 = Color3.fromRGB(153, 153, 153),
+							ImageColor3 = Color3.fromRGB(240, 240, 240),
 							Name = "Ico"
 						}), "TextDark"),
 						AddThemeObject(SetProps(MakeElement("Label", "Selected", 13), {
