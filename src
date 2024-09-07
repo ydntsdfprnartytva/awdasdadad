@@ -658,7 +658,7 @@ function redzlib:MakeWindow(Configs)
     AnchorPoint = Vector2.new(0, 1),
     ScrollBarThickness = 1.5,
     BackgroundTransparency = 1,
-    ScrollBarImageTransparency = 0.2,
+    ScrollBarImageTransparency = 1,
     CanvasSize = UDim2.new(),
     AutomaticCanvasSize = "Y",
     ScrollingDirection = "Y",
@@ -770,7 +770,7 @@ function redzlib:MakeWindow(Configs)
     
     if Minimized then
       MinimizeButton.Image = "rbxassetid://10734896206"
-      CreateTween({MainFrame, "Size", SaveSize, 0.25, true})
+      CreateTween({MainFrame, "Size", SaveSize, 15, true})
       ControlSize1.Visible = true
       ControlSize2.Visible = true
       Minimized = false
@@ -779,7 +779,7 @@ function redzlib:MakeWindow(Configs)
       SaveSize = MainFrame.Size
       ControlSize1.Visible = false
       ControlSize2.Visible = false
-      CreateTween({MainFrame, "Size", UDim2.fromOffset(MainFrame.Size.X.Offset, 28), 0.25, true})
+      CreateTween({MainFrame, "Size", UDim2.fromOffset(MainFrame.Size.X.Offset, 28), 15, true})
       Minimized = true
     end
     
@@ -890,7 +890,7 @@ function redzlib:MakeWindow(Configs)
     
     MainCorner:Clone().Parent = Screen
     Frame.Parent = Screen
-    CreateTween({Frame, "Size", UDim2.fromOffset(250, 150), 0.2})
+    CreateTween({Frame, "Size", UDim2.fromOffset(250, 150), 1})
     CreateTween({Frame, "Transparency", 0, 0.15})
     CreateTween({Screen, "Transparency", 0.3, 0.15})
     
@@ -918,7 +918,7 @@ function redzlib:MakeWindow(Configs)
       Button.Activated:Connect(Callback)
     end
     function Dialog:Close()
-      CreateTween({Frame, "Size", UDim2.fromOffset(250 * 1.08, 150 * 1.08), 0.2})
+      CreateTween({Frame, "Size", UDim2.fromOffset(250 * 1.08, 150 * 1.08), 1})
       CreateTween({Screen, "Transparency", 1, 0.15})
       CreateTween({Frame, "Transparency", 1, 0.15, true})
       Screen:Destroy()
@@ -991,7 +991,7 @@ function redzlib:MakeWindow(Configs)
       AnchorPoint = Vector2.new(0, 1),
       ScrollBarThickness = 1.5,
       BackgroundTransparency = 1,
-      ScrollBarImageTransparency = 0.2,
+      ScrollBarImageTransparency = 1,
       ScrollBarImageColor3 = Theme["Color Theme"],
       AutomaticCanvasSize = "Y",
       ScrollingDirection = "Y",
@@ -1192,13 +1192,13 @@ function redzlib:MakeWindow(Configs)
         SetFlag(Flag, Default)
         Funcs:FireCallback(Callback, Default)
         if Default then
-          CreateTween({Toggle, "Position", UDim2.new(1, 0, 0.5), 0.25})
-          CreateTween({Toggle, "BackgroundTransparency", 0, 0.25})
-          CreateTween({Toggle, "AnchorPoint", Vector2.new(1, 0.5), 0.25, Wait or false})
+          CreateTween({Toggle, "Position", UDim2.new(1, 0, 0.5), 15})
+          CreateTween({Toggle, "BackgroundTransparency", 0, 15})
+          CreateTween({Toggle, "AnchorPoint", Vector2.new(1, 0.5), 15, Wait or false})
         else
-          CreateTween({Toggle, "Position", UDim2.new(0, 0, 0.5), 0.25})
-          CreateTween({Toggle, "BackgroundTransparency", 0.8, 0.25})
-          CreateTween({Toggle, "AnchorPoint", Vector2.new(0, 0.5), 0.25, Wait or false})
+          CreateTween({Toggle, "Position", UDim2.new(0, 0, 0.5), 15})
+          CreateTween({Toggle, "BackgroundTransparency", 0.8, 15})
+          CreateTween({Toggle, "AnchorPoint", Vector2.new(0, 0.5), 15, Wait or false})
         end
         WaitClick = false
       end;task.spawn(SetToggle, Default)
@@ -1307,9 +1307,9 @@ function redzlib:MakeWindow(Configs)
       local ScrollSize, WaitClick = 5
       local function Disable()
         WaitClick = true
-        CreateTween({Arrow, "Rotation", 0, 0.2})
-        CreateTween({DropFrame, "Size", UDim2.new(0, 152, 0, 0), 0.2, true})
-        CreateTween({Arrow, "ImageColor3", Color3.fromRGB(255, 255, 255), 0.2})
+        CreateTween({Arrow, "Rotation", 0, 1})
+        CreateTween({DropFrame, "Size", UDim2.new(0, 152, 0, 0), 1, true})
+        CreateTween({Arrow, "ImageColor3", Color3.fromRGB(255, 255, 255), 1})
         Arrow.Image = "rbxassetid://10709791523"
         NoClickFrame.Visible = false
         WaitClick = false
@@ -1329,7 +1329,7 @@ function redzlib:MakeWindow(Configs)
         ScrollSize = (math.clamp(Count, 0, 10) * 25) + 10
         if NoClickFrame.Visible then
           NoClickFrame.Visible = true
-          CreateTween({DropFrame, "Size", GetFrameSize(), 0.2, true})
+          CreateTween({DropFrame, "Size", GetFrameSize(), 1, true})
         end
       end
       
@@ -1338,14 +1338,14 @@ function redzlib:MakeWindow(Configs)
         WaitClick = true
         if NoClickFrame.Visible then
           Arrow.Image = "rbxassetid://10709791523"
-          CreateTween({Arrow, "ImageColor3", Color3.fromRGB(255, 255, 255), 0.2})
-          CreateTween({DropFrame, "Size", UDim2.new(0, 152, 0, 0), 0.2, true})
+          CreateTween({Arrow, "ImageColor3", Color3.fromRGB(255, 255, 255), 1})
+          CreateTween({DropFrame, "Size", UDim2.new(0, 152, 0, 0), 1, true})
           NoClickFrame.Visible = false
         else
           NoClickFrame.Visible = true
           Arrow.Image = "rbxassetid://10709790948"
-          CreateTween({Arrow, "ImageColor3", Theme["Color Theme"], 0.2})
-          CreateTween({DropFrame, "Size", GetFrameSize(), 0.2, true})
+          CreateTween({Arrow, "ImageColor3", Theme["Color Theme"], 1})
+          CreateTween({DropFrame, "Size", GetFrameSize(), 1, true})
         end
         WaitClick = false
       end
@@ -1662,7 +1662,7 @@ function redzlib:MakeWindow(Configs)
         while UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do task.wait()
           ControlPos()
         end
-        CreateTween({SliderIcon, "Transparency", 0.2, 0.3})
+        CreateTween({SliderIcon, "Transparency", 1, 0.3})
         Container.ScrollingEnabled = true
         SetFlag(Flag, Default)
       end)
@@ -1671,7 +1671,7 @@ function redzlib:MakeWindow(Configs)
         UIScale.Scale = 0.3
         CreateTween({UIScale, "Scale", 1.2, 0.1})
         CreateTween({LabelVal, "Rotation", math.random(-1, 1) * 5, 0.15, true})
-        CreateTween({UIScale, "Scale", 1, 0.2})
+        CreateTween({UIScale, "Scale", 1, 1})
         CreateTween({LabelVal, "Rotation", 0, 0.1})
       end)
       
@@ -1761,10 +1761,10 @@ function redzlib:MakeWindow(Configs)
       TextBoxInput.FocusLost:Connect(Input)Input()
       
       TextBoxInput.FocusLost:Connect(function()
-        CreateTween({Pencil, "ImageColor3", Color3.fromRGB(255, 255, 255), 0.2})
+        CreateTween({Pencil, "ImageColor3", Color3.fromRGB(255, 255, 255), 1})
       end)
       TextBoxInput.Focused:Connect(function()
-        CreateTween({Pencil, "ImageColor3", Theme["Color Theme"], 0.2})
+        CreateTween({Pencil, "ImageColor3", Theme["Color Theme"], 1})
       end)
       
       TextBox.OnChanging = false
