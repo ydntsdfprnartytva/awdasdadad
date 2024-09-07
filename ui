@@ -1,7 +1,7 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/drillygzzly/Roblox-UI-Libs/main/Yun%20V2%20Lib/Yun%20V2%20Lib%20Source.lua'))()
 
 local Library = initLibrary()
-local Window = Library:Load({name = "fisherrr.cc", sizeX = 425, sizeY = 512, color = Color3.fromRGB(255, 255, 255)})
+local Window = Library:Load({name = "fisherrr.cc", sizeX = 425, sizeY = 512, color = Color3.fromRGB(171, 39, 183)})
 
 local Tab = Window:Tab("Aiming")
 local Tab2 = Window:Tab("Visuals")
