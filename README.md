@@ -2,53 +2,51 @@
 
 ## Booting the Library
 ```lua
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/rainhitgrassed/awdasdadad/main/source"))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/rainhitgrassed/awdasdadad/main/source'))()
 ```
 
 
 
 ## Creating a Window
 ```lua
-local Window = redzlib:MakeWindow({
-  Title = "Test",
-  SubTitle = "hello",
-  SaveFolder = "Redz Config"
-})
+local Library = initLibrary()
+local Window = Library:Load({name = "xan", sizeX = 425, sizeY = 512, color = Color3.fromRGB(255, 255, 255)})
 ```
 
 
 
 ## Creating a Tab
 ```lua
-local Tab1 = Window:MakeTab({"Tab 1", "cool"})
+local Tab = Window:Tab("Aiming")
 ```
 
-## Creating a Button
+## Creating a Section
 ```lua
-Tab1:AddButton({"Print", function()
-print("Hello World!")
-end})
+local Aimingsec1 = Tab:Section{name = "Aim Assist", column = 1}
 ```
 
-
-## Creating a Checkbox toggle
+## Creating a toggle
 ```lua
-local Toggle1 = Tab1:AddToggle({
-  Name = "Speed",
-  Description = "Idk",
-  Default = false
-})
+       Aimingsec2:Toggle {
+    Name = "Enabled",
+    flag = "ooolol", 
+    callback = function(bool)
+
+    end
+}
 ```
 
 ## Creating a Slider
 ```lua
-Tab1:AddSlider({
-  Name = "Speed",
-  Min = 1,
-  Max = 100,
-  Increase = 1,
-  Default = 16,
-  Callback = function(Value)
-  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-  end
-})
+    Aimingsec1:Slider {
+    Name = "Smoothing",
+    Default = 0,
+    Min = 0,
+    Max = 30,
+    Decimals = 1,
+    Flag = "moooooo",
+    callback = function(bool)
+
+    end
+}
+```
