@@ -2,7 +2,7 @@
 
 ## Booting the Library
 ```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/rainhitgrassed/awdasdadad/main/source'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/rainhitgrassed/awdasdadad/main/ui'))()
 ```
 
 
