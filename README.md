@@ -22,12 +22,12 @@ local Tab = Window:Tab("Aiming")
 
 ## Creating a Section
 ```lua
-local Aimingsec1 = Tab:Section{name = "Aim Assist", column = 1}
+local sec1 = Tab:Section{name = "Aim Assist", column = 1}
 ```
 
 ## Creating a toggle
 ```lua
-       Aimingsec2:Toggle {
+       sec1:Toggle {
     Name = "Enabled",
     flag = "ooolol", 
     callback = function(bool)
@@ -38,7 +38,7 @@ local Aimingsec1 = Tab:Section{name = "Aim Assist", column = 1}
 
 ## Creating a Slider
 ```lua
-    Aimingsec1:Slider {
+    sec1:Slider {
     Name = "Smoothing",
     Default = 0,
     Min = 0,
@@ -49,4 +49,16 @@ local Aimingsec1 = Tab:Section{name = "Aim Assist", column = 1}
 
     end
 }
+```
+
+## Create a Dropdown
+```lua
+sec1:dropdown {
+    name = "Aim",
+    content = {"Head", "Torso", "HumanoidRootPart", "Right Arm", "Left Arm"},
+    multichoice = true, -- true is multi dropdown false is regular dropdown
+    callback = function(bool) --
+
+
+    end}
 ```
