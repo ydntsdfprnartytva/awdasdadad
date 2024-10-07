@@ -1,4 +1,4 @@
-# Ghxst Hub
+# Shadow.cc
 
 ## Booting the Library
 ```lua
